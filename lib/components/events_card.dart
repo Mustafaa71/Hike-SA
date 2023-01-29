@@ -1,15 +1,15 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/constants.dart';
 import 'package:flutter_project_2/models/event.dart';
 
 class EventsCard extends StatefulWidget {
   final Event event;
-  final Ticket? ticket;
 
   const EventsCard({
     Key? key,
     required this.event,
-    required this.ticket,
   }) : super(key: key);
 
   @override
@@ -47,9 +47,10 @@ class _EventsCardState extends State<EventsCard> {
             InkWell(
               onTap: (() {
                 setState(() {
+                  log(widget.event.toString());
                   Ticket.book.add(Ticket(
-                    qrCode: 'https://www.onegiantleap.com/en/home.html',
-                    message: 'Nice choice.\nNow you can join the event with QR below',
+                    qrCode: widget.event.website,
+                    message: 'Thank you for booking with us!',
                   ));
                 });
                 print('ssss');

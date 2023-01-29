@@ -20,7 +20,6 @@ class EventsPage extends StatelessWidget {
             for (final events in EventData.events) ...[
               EventsCard(
                 event: events,
-                ticket: null,
               ),
               const SizedBox(
                 height: 20.0,
