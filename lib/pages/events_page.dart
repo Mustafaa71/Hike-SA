@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/components/event_card.dart';
+import 'package:flutter_project_2/components/events_card.dart';
 import 'package:flutter_project_2/constants.dart';
-import 'package:flutter_project_2/models/events.dart';
+import 'package:flutter_project_2/models/event.dart';
 
 class EventsPage extends StatelessWidget {
   const EventsPage({super.key});
@@ -10,11 +10,8 @@ class EventsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Events', style: TextStyle(color: Constants.kFontsColor, fontSize: 29.0)),
         elevation: 0,
-        title: const Text(
-          'Events',
-          style: TextStyle(color: kFontsColor, fontSize: 29.0),
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0),
@@ -27,8 +24,8 @@ class EventsPage extends StatelessWidget {
               ),
               const SizedBox(
                 height: 20.0,
-              )
-            ]
+              ),
+            ],
           ],
         ),
       ),

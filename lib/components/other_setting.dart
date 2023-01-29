@@ -14,25 +14,17 @@ class OtherSetting extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
-          icon,
-          color: kIconsColor,
-          size: 40.0,
-        ),
+        Icon(icon, size: Constants.settingiconsize, color: Constants.kIconsColor),
         const SizedBox(width: 12.0),
         Text(
           label,
           style: const TextStyle(
-            color: kFontsColor,
+            color: Constants.kFontsColor,
             fontSize: 20.0,
           ),
         ),
         const Spacer(),
-        const Icon(
-          Icons.chevron_right_sharp,
-          color: kIconsColor,
-          size: 35.0,
-        ),
+        const Icon(Icons.chevron_right_sharp, size: 35.0, color: Constants.kIconsColor),
       ],
     );
   }

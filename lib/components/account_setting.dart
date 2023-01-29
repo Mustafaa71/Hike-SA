@@ -11,29 +11,29 @@ class AccountSetting extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(15.0),
       decoration: BoxDecoration(
+        color: Constants.kBoxColor,
+        borderRadius: const BorderRadius.all(Radius.circular(20.0)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.5),
-            spreadRadius: 1.5,
-            blurRadius: 7.0,
+            color: Colors.black.withOpacity(Constants.opacity),
             offset: const Offset(1, 5),
+            blurRadius: Constants.bluradius,
+            spreadRadius: Constants.spreadradius,
           ),
         ],
-        color: kBoxColor,
-        borderRadius: BorderRadius.circular(20.0),
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.all(20.0),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50.0),
-              color: kIconsColor,
+            decoration: const BoxDecoration(
+              color: Constants.kIconsColor,
+              borderRadius: BorderRadius.all(Radius.circular(50.0)),
             ),
             child: const Text(
               'M',
               style: TextStyle(
-                color: kFontsColor,
+                color: Constants.kFontsColor,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               ),
@@ -46,17 +46,14 @@ class AccountSetting extends StatelessWidget {
               Text(
                 'Mustafa Yassin',
                 style: TextStyle(
-                  color: kFontsColor,
+                  color: Constants.kFontsColor,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
                 '@Mustafa71',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.grey,
-                ),
+                style: TextStyle(color: Colors.grey, fontSize: 16.0),
               ),
             ],
           ),

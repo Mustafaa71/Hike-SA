@@ -8,18 +8,12 @@ class LogoutButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
       padding: const EdgeInsets.all(20.0),
-      decoration: const BoxDecoration(
-        color: Color(0xFF432c30),
-      ),
+      decoration: const BoxDecoration(color: Color(0xFF432c30)),
+      width: double.infinity,
       child: const Text(
         'Logout',
-        style: TextStyle(
-          color: Color(0xFFd66768),
-          fontSize: 25.0,
-          fontWeight: FontWeight.bold,
-        ),
+        style: TextStyle(color: Color(0xFFd66768), fontSize: 25.0, fontWeight: FontWeight.bold),
         textAlign: TextAlign.center,
       ),
     );

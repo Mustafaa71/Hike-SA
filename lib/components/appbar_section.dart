@@ -16,7 +16,7 @@ class AppbarSection extends StatelessWidget {
         const Text(
           'Welcome\nMustafa',
           style: TextStyle(
-            color: kFontsColor,
+            color: Constants.kFontsColor,
             fontSize: 40.0,
             fontWeight: FontWeight.bold,
           ),
@@ -25,29 +25,30 @@ class AppbarSection extends StatelessWidget {
         /// Icon Section .....
         InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: ((context) => const TicketPage())));
+            Navigator.push<void>(
+              context,
+              MaterialPageRoute(
+                builder: ((context) => const TicketPage()),
+              ),
+            );
           },
           child: Container(
             padding: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
-              color: kBoxColor,
-              borderRadius: BorderRadius.circular(15.0),
+              color: Constants.kBoxColor,
+              borderRadius: const BorderRadius.all(Radius.circular(15.0)),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.5),
-                  spreadRadius: 0.5,
-                  blurRadius: 4.0,
+                  color: Colors.black.withOpacity(Constants.opacity),
                   offset: const Offset(4, 4),
+                  blurRadius: Constants.bluradius,
+                  spreadRadius: Constants.spreadradius,
                 ),
               ],
             ),
-            child: const Icon(
-              Icons.notifications_outlined,
-              color: kIconsColor,
-              size: 50.0,
-            ),
+            child: const Icon(Icons.notifications_outlined, size: 50.0, color: Constants.kIconsColor),
           ),
-        )
+        ),
       ],
     );
   }

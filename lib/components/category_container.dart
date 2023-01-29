@@ -18,34 +18,22 @@ class CategoryContainer extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-          height: 90.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15.0),
-            color: kBoxColor,
-          ),
+          decoration:
+              const BoxDecoration(color: Constants.kBoxColor, borderRadius: BorderRadius.all(Radius.circular(15.0))),
+          height: Constants.categorycontainer,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Stack(
-              children: [
-                Text(
-                  label,
-                  style: const TextStyle(
-                    fontSize: 25.0,
-                    color: kFontsColor,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Positioned(
-                  bottom: 0,
-                  right: 0,
-                  child: Icon(
-                    icon,
-                    size: 40.0,
-                    color: kIconsColor,
-                  ),
-                ),
-              ],
-            ),
+            child: Stack(children: [
+              Text(
+                label,
+                style: const TextStyle(color: Constants.kFontsColor, fontSize: 25.0, fontWeight: FontWeight.bold),
+              ),
+              Positioned(
+                right: 0,
+                bottom: 0,
+                child: Icon(icon, size: Constants.categorycontainerpositioned, color: Constants.kIconsColor),
+              ),
+            ]),
           ),
         ),
       ),

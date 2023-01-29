@@ -10,11 +10,8 @@ class PersonalPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Personal Info', style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold)),
         elevation: 0.0,
-        title: const Text(
-          "Personal Info",
-          style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -35,11 +32,11 @@ class PersonalPage extends StatelessWidget {
                   ),
                 ),
                 Divider(thickness: 0.5, color: Color(0xFF7e7f81)),
-                OtherSetting(label: 'Edit Personal Details', icon: Icons.person_outline),
+                OtherSetting(icon: Icons.person_outline, label: 'Edit Personal Details'),
                 Divider(thickness: 0.5, color: Color(0xFF7e7f81)),
-                OtherSetting(label: 'Theme', icon: Icons.color_lens_outlined),
+                OtherSetting(icon: Icons.color_lens_outlined, label: 'Theme'),
                 Divider(thickness: 0.5, color: Color(0xFF7e7f81)),
-                OtherSetting(label: 'Invoice', icon: Icons.account_balance_wallet_outlined),
+                OtherSetting(icon: Icons.account_balance_wallet_outlined, label: 'Invoice'),
                 Divider(thickness: 0.5, color: Color(0xFF7e7f81)),
               ],
             ),

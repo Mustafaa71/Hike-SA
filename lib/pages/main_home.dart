@@ -6,14 +6,14 @@ import 'package:flutter_project_2/components/search_section.dart';
 import 'package:flutter_project_2/constants.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class MainHome extends StatefulWidget {
+  const MainHome({super.key});
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<MainHome> createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,17 +26,14 @@ class _MainPageState extends State<MainPage> {
             SizedBox(height: 12.0),
 
             /// Search field section .....
-            SearchField(),
+            SearchSection(),
             SizedBox(height: 12.0),
 
             /// Map section .....
             SizedBox(
-              height: 355.0,
               width: double.infinity,
-              child: GoogleMap(
-                initialCameraPosition: initialCameraPosition,
-                mapType: MapType.hybrid,
-              ),
+              height: 355.0,
+              child: GoogleMap(initialCameraPosition: Constants.initialCameraPosition, mapType: MapType.hybrid),
             ),
             SizedBox(height: 20.0),
 

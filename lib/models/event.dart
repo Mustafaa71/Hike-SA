@@ -6,18 +6,17 @@ class Event {
 }
 
 class Ticket {
+  static final List<Ticket> ticket = [
+    Ticket(qrCode: 'Not yet', message: 'Nice choice.\nNow you can join the event with QR below'),
+  ];
+  static final List<Ticket> book = [];
   final String qrCode;
   final String message;
   Ticket({required this.qrCode, required this.message});
-
-  static List<Ticket> ticket = [
-    Ticket(qrCode: 'Not yet', message: 'Nice choice.\nNow you can join the event with QR below'),
-  ];
-  static List<Ticket> book = [];
 }
 
 class EventData {
-  static List<Event> events = [
+  static final List<Event> events = [
     Event(
       imageUrl: 'https://www.masaratclub.com/wp-content/uploads/2022/10/IMG_045595-e1670798082812.jpeg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer',
