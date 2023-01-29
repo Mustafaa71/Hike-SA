@@ -14,11 +14,18 @@ class TicketInCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(Constants.sizingticketpadd),
-      decoration:
-          const BoxDecoration(color: Constants.kBoxColor, borderRadius: BorderRadius.all(Radius.circular(30.0))),
+      decoration: const BoxDecoration(
+        color: Constants.kBoxColor,
+        borderRadius: BorderRadius.all(
+          Radius.circular(30.0),
+        ),
+      ),
       margin: const EdgeInsets.all(Constants.sizingticketmar),
       child: Column(mainAxisSize: MainAxisSize.min, children: [
-        Text(ticket.message, style: const TextStyle(color: Colors.white, fontSize: 30.0)),
+        Text(
+          ticket.message,
+          style: const TextStyle(color: Colors.white, fontSize: 30.0),
+        ),
         const SizedBox(height: 20.0),
         QrImage(
           data: ticket.qrCode,
