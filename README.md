@@ -2,4 +2,5 @@
 
 ## Video Overview
 
-![Uploading demogg.gif…]()
+![Video Overview](images/demogg.gif)
+
