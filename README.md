@@ -25,7 +25,7 @@ To get started with the Derby App, follow these steps:
     ```
 2. Navigate to the project directory:
     ```bash
-    cd derby-app
+    cd Hike-SA
     ```
 3. Install the dependencies:
     ```bash
