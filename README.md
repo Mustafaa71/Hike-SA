@@ -1,5 +1,5 @@
-![Custom Banner](images/hike-sa.png)
 # Hike-SA
+![Custom Banner](images/hike-sa.png)
 
 Hike-SA is an application developed at Tuwaiq Academy | أكاديمية طويق in flutter bootcamp.
 
