@@ -11,7 +11,7 @@ Hike-SA is an application developed at Tuwaiq Academy | أكاديمية طوي�
 -   **Technologies and Frameworks:**
     -   Dart
     -   Flutter
-    -   Supabase
+    -   Firebase
     -   Google Cloud
 
 ## Installation
