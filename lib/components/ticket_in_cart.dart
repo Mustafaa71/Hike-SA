@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/constants.dart';
 import 'package:flutter_project_2/models/event.dart';
-import 'package:qr_flutter/qr_flutter.dart';
 
 class TicketInCart extends StatelessWidget {
   final Ticket ticket;
@@ -27,12 +26,6 @@ class TicketInCart extends StatelessWidget {
           style: const TextStyle(color: Colors.white, fontSize: 30.0),
         ),
         const SizedBox(height: 20.0),
-        QrImage(
-          data: ticket.qrCode,
-          size: Constants.qrimagesize,
-          backgroundColor: Colors.white,
-          version: QrVersions.auto,
-        ),
       ]),
     );
   }

@@ -16,11 +16,11 @@ class MainHome extends StatefulWidget {
 class _MainPageState extends State<MainHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 25.0, top: 70.0, right: 25.0),
+        padding: EdgeInsets.only(left: 25.0, top: 55.0, right: 25.0),
         child: Column(
-          children: const [
+          children: [
             /// Appbar Section .....
             AppbarSection(),
             SizedBox(height: 12.0),
@@ -32,8 +32,11 @@ class _MainPageState extends State<MainHome> {
             /// Map section .....
             SizedBox(
               width: double.infinity,
-              height: 355.0,
-              child: GoogleMap(initialCameraPosition: Constants.initialCameraPosition, mapType: MapType.hybrid),
+              height: 310.0,
+              child: GoogleMap(
+                initialCameraPosition: Constants.initialCameraPosition,
+                mapType: MapType.hybrid,
+              ),
             ),
             SizedBox(height: 20.0),
 

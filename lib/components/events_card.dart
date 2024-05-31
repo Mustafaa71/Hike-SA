@@ -1,8 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/constants.dart';
 import 'package:flutter_project_2/models/event.dart';
+import 'package:flutter_project_2/pages/event_card_detail.dart';
 
 class EventsCard extends StatefulWidget {
   final Event event;
@@ -40,22 +39,28 @@ class _EventsCardState extends State<EventsCard> {
           const SizedBox(height: 40.0),
           Row(children: [
             const Text(
-              'Book Now',
+              'Available',
               style: TextStyle(color: Colors.green, fontSize: 20.0, fontWeight: FontWeight.bold),
             ),
             const SizedBox(width: 48.0),
             InkWell(
               onTap: (() {
-                setState(() {
-                  log(widget.event.toString());
-                  Ticket.book.add(Ticket(
-                    qrCode: widget.event.website,
-                    message: 'Thank you for booking with us!',
-                  ));
-                });
-                print('ssss');
+                Navigator.push<void>(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return EventCardDetail(
+                        event: widget.event,
+                      );
+                    },
+                  ),
+                );
               }),
-              child: const Icon(Icons.bookmark_add_sharp, size: 40.0, color: Colors.white),
+              child: const Icon(
+                Icons.bookmark_add_sharp,
+                size: 40.0,
+                color: Colors.white,
+              ),
             ),
           ]),
         ]),

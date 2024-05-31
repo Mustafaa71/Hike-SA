@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_2/constants.dart';
 
 class AccountSetting extends StatelessWidget {
+  final String userName;
+  final String userNameId;
   const AccountSetting({
     Key? key,
+    required this.userName,
+    required this.userNameId,
   }) : super(key: key);
 
   @override
@@ -42,18 +46,18 @@ class AccountSetting extends StatelessWidget {
           const SizedBox(width: 20.0),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
-                'Mustafa Yassin',
-                style: TextStyle(
+                userName,
+                style: const TextStyle(
                   color: Constants.kFontsColor,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                '@Mustafa71',
-                style: TextStyle(color: Colors.grey, fontSize: 16.0),
+                '@$userNameId',
+                style: const TextStyle(color: Colors.grey, fontSize: 16.0),
               ),
             ],
           ),

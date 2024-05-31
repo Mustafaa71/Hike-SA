@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/constants.dart';
+import 'package:flutter_project_2/pages/cart_page.dart';
+import 'package:flutter_project_2/pages/group_page.dart';
 import 'package:flutter_project_2/pages/personal_page.dart';
 
 class NavigationSection extends StatelessWidget {
@@ -19,7 +21,18 @@ class NavigationSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const Icon(Icons.home_outlined, size: 45.0, color: Constants.kIconsColor),
-              const Icon(Icons.data_saver_on_sharp, size: 45.0, color: Constants.kIconsColor),
+              InkWell(
+                onTap: (() {
+                  Navigator.push<void>(context, MaterialPageRoute(builder: ((context) => const CartPage())));
+                }),
+                child: const Icon(Icons.data_saver_on_sharp, size: 45.0, color: Constants.kIconsColor),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push<void>(context, MaterialPageRoute(builder: ((context) => const GroupPage())));
+                },
+                child: const Icon(Icons.groups_outlined, size: 45.0, color: Constants.kIconsColor),
+              ),
               InkWell(
                 onTap: () {
                   Navigator.push<void>(context, MaterialPageRoute(builder: ((context) => const PersonalPage())));

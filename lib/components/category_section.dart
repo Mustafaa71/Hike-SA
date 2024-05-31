@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/category_container.dart';
 import 'package:flutter_project_2/pages/events_page.dart';
+import 'package:flutter_project_2/pages/news_page.dart';
+import 'package:flutter_project_2/pages/offers_page.dart';
 
 class CategorySection extends StatelessWidget {
   const CategorySection({
@@ -13,7 +15,13 @@ class CategorySection extends StatelessWidget {
       children: [
         Row(
           children: [
-            const CategoryContainer(icon: Icons.newspaper_rounded, label: 'News', onTap: null),
+            CategoryContainer(
+              icon: Icons.newspaper_rounded,
+              label: 'News',
+              onTap: (() {
+                Navigator.push<void>(context, MaterialPageRoute(builder: ((context) => const NewsPage())));
+              }),
+            ),
             const SizedBox(width: 8.0),
             CategoryContainer(
               icon: Icons.location_on_outlined,
@@ -31,10 +39,22 @@ class CategorySection extends StatelessWidget {
         ),
         const SizedBox(height: 8.0),
         Row(
-          children: const [
-            CategoryContainer(icon: Icons.discount_outlined, label: 'Offers', onTap: null),
-            SizedBox(width: 8),
-            CategoryContainer(icon: Icons.card_giftcard_rounded, label: 'Gifts', onTap: null),
+          children: [
+            CategoryContainer(
+              icon: Icons.discount_outlined,
+              label: 'Offers',
+              onTap: (() {
+                Navigator.push<void>(context, MaterialPageRoute(builder: ((context) => const OffersPage())));
+              }),
+            ),
+            const SizedBox(width: 8),
+            CategoryContainer(
+              icon: Icons.card_giftcard_rounded,
+              label: 'Gifts',
+              onTap: (() {
+                // Constants.getLocation();
+              }),
+            ),
           ],
         ),
       ],

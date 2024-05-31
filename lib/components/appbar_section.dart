@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/constants.dart';
+import 'package:flutter_project_2/models/event.dart';
 import 'package:flutter_project_2/pages/ticket_page.dart';
 
 class AppbarSection extends StatelessWidget {
@@ -13,11 +14,11 @@ class AppbarSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         /// Welcome Section .....
-        const Text(
-          'Welcome\nMustafa',
-          style: TextStyle(
+        Text(
+          'Welcome\n${Registration.information.name}',
+          style: const TextStyle(
             color: Constants.kFontsColor,
-            fontSize: 40.0,
+            fontSize: 30.0,
             fontWeight: FontWeight.bold,
           ),
         ),
